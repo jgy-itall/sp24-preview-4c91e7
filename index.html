@@ -678,7 +678,9 @@ body.modal-open .floatbar{right:var(--sbw,0px);}
   .faq__bul{gap:4px;}
   .faq__bul li{font-size:13px;line-height:1.38;letter-spacing:1.94%;padding-left:14px;}
   .faq__bul li::before{line-height:1.38;}
-  .faq__bul li > b:first-child{display:block;font-weight:600;}
+  /* 라벨형 불릿만 줄바꿈 — :first-child는 앞의 텍스트 노드를 무시해
+     문장 중간 <b>까지 블록이 되어 어절이 아닌 곳에서 끊겼다 */
+  .faq__bul li > b.lbl{display:block;font-weight:600;}
   .notelist li > span > b:first-child{display:block;font-weight:600;}
   .faq__item{border-bottom-color:var(--line);}
 
@@ -1114,10 +1116,10 @@ body.modal-open .floatbar{right:var(--sbw,0px);}
               <p class="faq__lead">A. 본인 인증 후 탐구 정보 입력 및 응시 희망 학교를 선택한 뒤, 결제가 완료되면 응시가 확정됩니다.</p>
               <div class="faq__hr"></div>
               <ul class="faq__bul">
-                <li><b>일반 응시생:</b> 응시생 본인만 직접 신청 가능하며, 대리 신청은 불가합니다.</li>
-                <li><b>잇올 재원생(혜택 적용):</b> 응시생 본인 또는 잇올 앱에 연동된 학부모(보호자) 계정으로 신청 가능합니다.</li>
-                <li><b>중복 응시 제한:</b> 학교프로젝트는 해당 시행 월의 대성 더프리미엄 모의고사로 진행되며, 동일 회차 중복 응시는 불가합니다. (성적 처리 불가)</li>
-                <li><b>접수 취소 안내:</b> 타인 명의 도용, 허위 접수, 중복 응시의 경우 접수 취소 및 응시가 제한될 수 있습니다.</li>
+                <li><b class="lbl">일반 응시생:</b> 응시생 본인만 직접 신청 가능하며, 대리 신청은 불가합니다.</li>
+                <li><b class="lbl">잇올 재원생(혜택 적용):</b> 응시생 본인 또는 잇올 앱에 연동된 학부모(보호자) 계정으로 신청 가능합니다.</li>
+                <li><b class="lbl">중복 응시 제한:</b> 학교프로젝트는 해당 시행 월의 대성 더프리미엄 모의고사로 진행되며, 동일 회차 중복 응시는 불가합니다. (성적 처리 불가)</li>
+                <li><b class="lbl">접수 취소 안내:</b> 타인 명의 도용, 허위 접수, 중복 응시의 경우 접수 취소 및 응시가 제한될 수 있습니다.</li>
               </ul>
             </div>
           </div>
