@@ -293,6 +293,7 @@ button{font-family:inherit;}
 /* ── 07 신청 안내 ── */
 .dl{border-top:1px solid var(--ink);}
 .dl__row{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:22px 4px;border-bottom:1px solid var(--line-2);}
+.dl__row[hidden]{display:none !important;}
 .dl__k{margin:0;font-size:18px;font-weight:600;line-height:1.45;letter-spacing:-0.02%;color:var(--ink);}
 .dl__v{margin:0;font-size:18px;font-weight:400;line-height:1.45;letter-spacing:-0.02%;color:var(--ink);}
 .dl__v .sub{display:block;margin-top:6px;font-size:14px;line-height:1.43;letter-spacing:1.45%;color:#676767;}
@@ -962,8 +963,9 @@ body.modal-open .floatbar{right:var(--sbw,0px);}
         <div class="dl__row"><p class="dl__k">대상</p><p class="dl__v">제24회 학교프로젝트 참여 희망자 누구나</p></div>
         <div class="dl__row"><p class="dl__k">일시</p><p class="dl__v">2026.10.17(토) ~ 2026.10.18(일)<span class="sub">※ 시험장에 따라 상이함</span></p></div>
         <div class="dl__row"><p class="dl__k">장소</p><p class="dl__v"><a href="#venue" style="text-decoration:underline;text-underline-offset:3px;">하단 시험장 참고</a></p></div>
-        <div class="dl__row"><p class="dl__k">신청 기간</p><p class="dl__v">추후 안내 (9월 중 OPEN)</p></div>
-        <div class="dl__row"><p class="dl__k">신청 방법</p><p class="dl__v">추후 안내 (9월 중 OPEN)</p></div>
+        <div class="dl__row"><p class="dl__k">신청 기간</p><p class="dl__v">9/11(금) 12:30 ~ 9/21(월) 13:00</p></div>
+        <!-- 숨김 처리 (시안 row/신청 방법 visible=false) — 다시 살리려면 hidden 속성만 제거 -->
+        <div class="dl__row" hidden><p class="dl__k">신청 방법</p><p class="dl__v">추후 안내 (9월 중 OPEN)</p></div>
         <div class="dl__row">
           <p class="dl__k">참고사항</p>
           <ul class="notelist">
