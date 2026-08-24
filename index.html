@@ -389,7 +389,7 @@ button{font-family:inherit;}
 .price__stack-in{position:absolute;top:0;left:0;width:420px;height:214px;
   transform:scale(var(--s));transform-origin:0 0;}
 /* 카드 — 좌우 홈을 mask 로 실제로 뚫어 뒤 카드가 비치게 한다.
-   box-shadow 는 mask 에 잘리므로 그림자는 filter:drop-shadow 로 준다 */
+   그림자는 아래 .pcard__shadow 레이어가 맡는다 (opacity 만 전환) */
 /* CSS 는 filter → mask 순으로 적용되므로 카드에 mask 를 걸면 밖으로 퍼진 그림자가
    잘려 사라진다. 그래서 배경+홈(mask)은 내부 .pcard__face 가 맡고,
    그림자(filter)는 mask 가 없는 바깥 .pcard 에 준다 */
