@@ -419,8 +419,10 @@ button{font-family:inherit;}
 /* 카드 내부 — 실측 좌표 그대로 절대배치 */
 .pc-brand{position:absolute;left:24px;top:21px;
   font-size:20px;font-weight:700;line-height:1.45;letter-spacing:-0.02%;}
-.pc-mark{position:absolute;top:25px;display:flex;align-items:center;height:20px;
-  font-size:13px;font-weight:500;line-height:1.4;letter-spacing:0;color:#262628;}
+/* 실측: 14/Medium/lh140% · plus 20x20 이 카드 우측 25px 지점에서 끝난다.
+   좌측 고정으로 두면 글자 길이가 바뀔 때 아이콘이 밀리므로 우측 기준으로 배치 */
+.pc-mark{position:absolute;right:25px;top:25px;display:flex;align-items:center;height:20px;
+  font-size:14px;font-weight:500;line-height:1.4;letter-spacing:0;color:#262628;}
 .pc-mark svg{display:block;flex:none;}
 .pc-label{position:absolute;left:24px;top:149px;
   font-size:18px;font-weight:700;line-height:1.16;letter-spacing:-2.82%;}
@@ -1236,7 +1238,7 @@ body.modal-open .floatbar{right:var(--sbw,0px);}
           <button type="button" class="pcard pcard--cyan is-back" aria-label="응시료 카드 앞뒤 바꾸기">
             <svg class="pcard__face" viewBox="0 0 406 197" preserveAspectRatio="none" aria-hidden="true"><path d="M0.5 0.5H405.5V87A13 13 0 0 0 405.5 113V196.5H0.5V113A13 13 0 0 0 0.5 87Z"/></svg>
             <span class="pc-logo"><svg viewBox="0 0 36 18" fill="none" aria-hidden="true"><path d="M0 2.587V0.0164515H2.45156V2.58494H0V2.587ZM0 18V5.15549H2.45156V18H0Z" fill="currentColor"/><path d="M6.16324 5.15549V0.0164515H8.6148V5.15343H12.2931V7.72192H8.6148V11.5757C8.6148 12.6368 8.97399 13.5458 9.69435 14.2984C10.4127 15.0511 11.2803 15.4295 12.2931 15.4295V17.9979C10.6012 17.9979 9.15653 17.3707 7.95922 16.1163C6.7619 14.8619 6.16324 13.3483 6.16324 11.5757V7.72192H4.93648V5.15343H6.16324V5.15549Z" fill="currentColor"/><path d="M23.6657 16.7271C22.6116 17.5743 21.3849 17.9979 19.9874 17.9979C18.2954 17.9979 16.8508 17.3707 15.6535 16.1163C14.4561 14.8619 13.8575 13.3483 13.8575 11.5757C13.8575 9.80304 14.4561 8.2895 15.6535 7.03507C16.8508 5.78065 18.2954 5.15343 19.9874 5.15343C21.3849 5.15343 22.6116 5.57706 23.6657 6.42431L23.6833 6.44693L26.1349 5.1267L26.1172 17.9959H23.6657V16.725V16.7271ZM19.9874 7.72398C18.9745 7.72398 18.107 8.10031 17.3886 8.85502C16.6702 9.60768 16.309 10.5166 16.309 11.5777C16.309 12.6389 16.6682 13.5478 17.3886 14.3005C18.107 15.0531 18.9745 15.4315 19.9874 15.4315C21.0002 15.4315 21.8677 15.0552 22.5861 14.3005C23.3045 13.5478 23.6657 12.6389 23.6657 11.5777C23.6657 10.5166 23.3065 9.60768 22.5861 8.85502C21.8677 8.10237 21.0002 7.72398 19.9874 7.72398Z" fill="currentColor"/><path d="M31.0557 2.57466V18H28.6041V3.85171L31.0557 2.57466Z" fill="currentColor"/><path d="M36 0V18H33.5484V1.26265L36 0Z" fill="currentColor"/></svg></span>
-            <span class="pc-mark" style="left:216px;">일반 신청 응시료 자세히보기<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4.5v11M4.5 10h11" stroke="#262628" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+            <span class="pc-mark" style="right:24px;top:24px;">일반 신청 응시료 자세히보기<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4.5v11M4.5 10h11" stroke="#262628" stroke-width="1.5" stroke-linecap="round"/></svg></span>
             <span class="pc-benefit">
               <span class="pc-benefit__t">잇올 재원생은 50% 할인 혜택</span>
               <span class="pc-num" style="position:static;">
@@ -1249,7 +1251,7 @@ body.modal-open .floatbar{right:var(--sbw,0px);}
           <button type="button" class="pcard pcard--green is-front" aria-label="응시료 카드 앞뒤 바꾸기">
             <svg class="pcard__face" viewBox="0 0 406 197" preserveAspectRatio="none" aria-hidden="true"><path d="M0.5 0.5H405.5V87A13 13 0 0 0 405.5 113V196.5H0.5V113A13 13 0 0 0 0.5 87Z"/></svg>
             <span class="pc-brand">NCOMM</span>
-            <span class="pc-mark" style="left:205px;">잇올 재원생 혜택가 자세히보기<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4.5v11M4.5 10h11" stroke="#262628" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+            <span class="pc-mark">잇올 재원생 혜택가 자세히보기<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4.5v11M4.5 10h11" stroke="#262628" stroke-width="1.5" stroke-linecap="round"/></svg></span>
             <span class="pc-label">일반 신청 응시료</span>
             <span class="pc-num" style="left:155px;top:112px;">
               <b style="font-size:56px;font-weight:800;line-height:1.16;letter-spacing:-2.82%;">66,000</b>
