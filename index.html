@@ -237,7 +237,8 @@ button{font-family:inherit;}
 .criteriaBtn .criteriaIco{flex:none;width:16px;height:16px;display:grid;place-items:center;
   color:var(--ink-2);transition:transform .2s ease;}
 .criteriaBtn .criteriaIco svg{display:block;}
-.criteriaBtn[aria-expanded="false"] i{transform:rotate(180deg);}
+/* 접힘 상태에서 chevron-up 을 180도 돌려 아래를 가리키게 함 */
+.criteriaBtn[aria-expanded="false"] .criteriaIco{transform:rotate(180deg);}
 .criteriaBody{display:none;width:100%;background:#fff;border:1px solid var(--line);padding:24px 26px;}
 .criteriaBody.isOpen{display:flex;flex-direction:column;gap:10px;}
 .criteriaBody p{margin:0;font-size:13px;font-weight:400;line-height:1.38;letter-spacing:1.94%;color:var(--ink-2);}
