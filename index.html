@@ -617,9 +617,14 @@ body.modalOpen{overflow:hidden;}
   .gnb{position:sticky;}
   .gnbCta{display:none;}
   .gnbLeft{gap:0;flex:0 1 auto;min-width:0;}
-  .gnbToggle{display:flex;flex-direction:column;justify-content:center;gap:5px;
-    width:24px;height:24px;padding:3px 0;border:none;background:none;cursor:pointer;}
-  .gnbToggle span{display:block;width:24px;height:2px;border-radius:1px;background:var(--ink);}
+  /* 열림 시 햄버거 > X 로 교체 (X 는 모달 닫기 버튼과 동일 아이콘) */
+  .gnbToggle{display:grid;place-items:center;
+    width:24px;height:24px;padding:0;border:none;background:none;cursor:pointer;color:var(--ink);}
+  .gnbToggleBars{display:flex;flex-direction:column;justify-content:center;gap:5px;width:24px;height:24px;}
+  .gnbToggleBars span{display:block;width:24px;height:2px;border-radius:1px;background:currentColor;}
+  .gnbToggleX{display:block;}
+  .gnbToggle[aria-expanded="false"] .gnbToggleX{display:none;}
+  .gnbToggle[aria-expanded="true"] .gnbToggleBars{display:none;}
   .gnbToggle:focus-visible{outline:2px solid var(--ink);outline-offset:4px;}
 
   /* 02 띠배너 — 14px / 항목 간 40 */
@@ -865,7 +870,11 @@ body.modalOpen{overflow:hidden;}
       </nav>
     </div>
     <button class="gnbToggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="gnbNav">
-      <span></span><span></span><span></span>
+      <span class="gnbToggleBars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <!-- Figma General/x-01 (24x24, 아이콘 17.5 / 획 1.5 / 라운드 캡) — 모달 닫기 버튼과 동일 -->
+      <svg class="gnbToggleX" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3.25 3.25 20.75 20.75M20.75 3.25 3.25 20.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
     </button>
     <div class="gnbCta">
       <a class="btn btnGhost" href="#apply">조회/수정/환불하기</a>
